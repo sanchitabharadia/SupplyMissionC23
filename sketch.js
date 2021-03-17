@@ -29,21 +29,17 @@ function setup() {
 	groundSprite=createSprite(width/2, height-35, width,10);
 	groundSprite.shapeColor=color(255)
 
-
 	engine = Engine.create();
 	world = engine.world;
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
-	
 
-	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
 
  	boxPosition=width/2-100
  	boxY=610;
-
 
  	boxleftSprite=createSprite(boxPosition, boxY, 20,100);
  	boxleftSprite.shapeColor=color(255,0,0);
